@@ -1,0 +1,51 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #09111f 0%, #111827 100%);
+  padding: 40px 20px;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .12em; font-size: 11px; color: #8ab4f8; }
+h1 { margin: 4px 0 0; font-size: 2.2rem; }
+.hero-grid, .stats-grid, .bottom-grid { display: grid; gap: 20px; }
+.hero-grid { grid-template-columns: 1.3fr 1fr; margin-bottom: 20px; }
+.stats-grid { grid-template-columns: repeat(4, minmax(180px, 1fr)); margin-bottom: 20px; }
+.bottom-grid { grid-template-columns: 1.1fr .9fr; }
+.card { background: rgba(15,23,42,.8); border: 1px solid rgba(148,163,184,.2); border-radius: 20px; padding: 22px; box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+.card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; color: #cbd5e1; font-weight: 600; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.dot.green { background: #34d399; box-shadow: 0 0 12px #34d399; }
+.dot.amber { background: #fbbf24; }
+.dot.paused { background: #64748b; }
+.stopwatch { font-size: clamp(2.3rem, 6vw, 5rem); font-weight: 800; letter-spacing: 2px; margin: 18px 0 22px; color: #f8fafc; }
+.timer-actions { display: flex; gap: 12px; }
+.primary-btn, .secondary-btn, .ghost-btn { border: none; border-radius: 12px; padding: 12px 18px; font-weight: 700; cursor: pointer; transition: .2s ease; }
+.primary-btn { background: linear-gradient(135deg,#3b82f6,#8b5cf6); color: white; }
+.secondary-btn { background: #1e293b; color: #e2e8f0; border: 1px solid rgba(148,163,184,.25); }
+.ghost-btn { background: transparent; color: #cbd5e1; border: 1px solid rgba(148,163,184,.2); }
+.primary-btn:hover, .secondary-btn:hover, .ghost-btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
+.big-number { font-size: 2.2rem; font-weight: 800; margin: 8px 0 18px; }
+.input-label { display: block; color: #cbd5e1; font-size: .9rem; margin-bottom: 18px; }
+.input-label input { width: 100%; margin-top: 8px; border: 1px solid rgba(148,163,184,.25); background: rgba(15,23,42,.9); color: white; border-radius: 10px; padding: 12px 14px; }
+.input-label input[type="range"] { padding: 0; accent-color: #60a5fa; }
+.progress-box { margin-top: 10px; }
+.progress-row { display: flex; justify-content: space-between; color: #cbd5e1; margin-bottom: 10px; }
+.progress-bar { width: 100%; height: 12px; background: rgba(148,163,184,.15); border-radius: 999px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg,#22c55e,#38bdf8); border-radius: inherit; transition: width .3s ease; }
+.category-work { background: #60a5fa; }
+.category-study { background: #34d399; }
+.category-social { background: #fbbf24; }
+.category-entertainment { background: #f472b6; }
+small { display: inline-block; margin-top: 8px; color: #94a3b8; }
+.label { margin: 0; color: #9ca3af; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; }
+.stats-grid h2 { margin: 10px 0 6px; font-size: 2rem; }
+.muted { color: #94a3b8; font-size: .85rem; }
+.usage-list { display: flex; flex-direction: column; gap: 16px; }
+.usage-item { display: flex; flex-direction: column; gap: 8px; }
+.usage-label { display: flex; justify-content: space-between; color: #e2e8f0; }
+.progress-bar.slim { height: 10px; }
+.reminder-box { display: flex; align-items: center; gap: 16px; background: rgba(30,41,59,.7); border-radius: 16px; padding: 16px; margin-top: 16px; }
+.reminder-circle { width: 78px; height: 78px; flex: 0 0 78px; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle,#0f172a 0%,#1d4ed8 100%); border: 4px solid rgba(96,165,250,.6); font-size: 1.2rem; }
+.reminder-status { margin: 0 0 6px; font-weight: 700; color: #f8fafc; }
+.mini-stat { display: flex; justify-content: space-between; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(148,163,184,.2); color: #cbd5e1; }
+@media (max-width: 900px) { .hero-grid, .stats-grid, .bottom-grid { grid-template-columns: 1fr; } }
